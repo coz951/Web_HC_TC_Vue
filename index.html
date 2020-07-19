@@ -35,10 +35,10 @@
         <!-- v-bind: 添加在屬性前 -->
         <!-- 屬性="資料名稱" !!!不需要加雙大括號!!! -->
         <h2 v-bind:align="aligment">標題二</h2>
-        <a v-bind:href="yahoo">奇摩!</a>
+        <a v-bind:href="yahoo" target="_blank">奇摩!</a>
     </div>
 
-    <h1>判斷式</h1>
+    <h1>判斷式 if</h1>
     <div id="vue3">
         <!-- 判斷式 v-if="資料名稱"-->
         <!-- 當資料 true 顯示，否則 隱藏 -->
@@ -51,14 +51,46 @@
         <span v-else="activity">活動已經結束囉。</span>
     </div>
 
+    <h1>迴圈 for</h1>
+
+    <div id="vue4">
+        <!-- v-for="變數 in 次數" -->
+        <a href="#" v-for="n in 5">分頁連結 {{ n }}</a>
+
+        <div v-for="p in products">
+            <h3>{{ p.name }}</h3>
+            <h4>價格:{{ p.price }} 元</h4>
+            <hr>
+        </div>
+    </div>
+
+    <h1>事件</h1>
+    <div id="vue5">
+        <!-- v-on:click 點擊後 -->
+        <!-- ="函式名稱" -->
+        <h2 v-on:click="">我是標題二 {{ text }}</h2>
+
+        <div>
+            啤酒 {{ count }} 箱
+            <span v-on:click="sub">-</span>
+            <span v-on:click="add">+</span>
+        </div>
+
+        <!-- v-on:click 簡寫為 @click -->
+        <h3 @click="change">點我 {{ msg }}</h3>
+        <h3 @dblclick="change">點我 {{ msg }}</h3>
+    </div>
+
+    <div id="vue6">
+        <label>請輸入您的姓名</label><input type="text" v-model="name">
+        <p>{{ name }} 您好，這是您的帳號資訊 : </p>
+
+    </div>
 
 
-    
 
     <!-- Vue CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./main.js"></script>
-
 </body>
-
 </html>

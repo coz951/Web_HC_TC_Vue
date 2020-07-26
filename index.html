@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+<div id="navber">
+    <navbar></navbar>>    
+</div>
+
     <h1>定義渲染區域</h1>
     <div id="vue1">
         {{ text }}
@@ -81,16 +85,36 @@
         <h3 @dblclick="change">點我 {{ msg }}</h3>
     </div>
 
+    <h1>輸入</h1>
+    <!-- v-model="資料名稱" 將元素內容儲存於資料名稱內 -->
     <div id="vue6">
         <label>請輸入您的姓名</label><input type="text" v-model="name">
         <p>{{ name }} 您好，這是您的帳號資訊 : </p>
+ </div>
 
-    </div>
+    <h1>元件</h1>
 
+    <!-- 使用元件 -->
+    <div id="vue7">
+        <test-a></test-a>
+        <test-a></test-a>
+        <test-a></test-a>
+        <test-a></test-a>
+        <test-a></test-a>
+        </div>>
 
+        <div id=vue8>
+            <vue-content></vue-content>
+            <vue-content></vue-content>
+            <vue-content></vue-content>
+            <vue-content></vue-content>
+        </div>
+
+        <div id="time">{{ hour}} : {{ minute }} : {{ second }}</div>
 
     <!-- Vue CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./main.js"></script>
+    
 </body>
 </html>
